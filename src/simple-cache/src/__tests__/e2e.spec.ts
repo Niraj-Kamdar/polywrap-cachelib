@@ -91,8 +91,8 @@ describe("e2e", () => {
 
     const deleteResult = await client.query({
       uri,
-      query: `query {
-        has(
+      query: `mutation {
+        delete(
           key: $key
         )
       }`,
