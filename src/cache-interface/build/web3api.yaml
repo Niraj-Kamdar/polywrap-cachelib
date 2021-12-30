@@ -1,0 +1,7 @@
+format: 0.0.1-prealpha.5
+language: interface
+modules:
+  query:
+    schema: ./schema.graphql
+  mutation:
+    schema: ./schema.graphql

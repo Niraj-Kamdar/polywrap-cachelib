@@ -1,0 +1,5 @@
+#import { Query, Mutation } into Cache from "ens/interface.cachelib.eth"
+
+type Query implements Cache_Query { }
+
+type Mutation implements Cache_Mutation { }

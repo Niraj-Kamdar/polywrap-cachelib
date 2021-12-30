@@ -1,0 +1,21 @@
+type Mutation {
+  """
+  Add a new key/value to the cache (overwrites value, if key already exists in the cache).
+  """
+  set(key: String!, value: String!, timeout: Int): Boolean! 
+
+  """
+  Works like set() but does not overwrite the values of already existing keys.
+  """
+  add(key: String!, value: String!, timeout: Int): Boolean! 
+
+  """
+  Delete key from the cache. Returns true if key exists in cache and has been deleted successfully
+  """
+  delete(key: String!): Boolean!
+
+  """
+  Clears the whole cache. 
+  """
+  clear: Boolean!
+}
