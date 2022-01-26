@@ -30,6 +30,22 @@ directive @capability(
 directive @enabled_interface on OBJECT
 ### Web3API Header END ###
 
+type Query {
+  """
+  Look up key in the cache and return the value for it if exists otherwise returns null
+  """
+  get(
+    key: String!
+  ): String
+
+  """
+  Checks if a key exists in the cache without returning it.
+  """
+  has(
+    key: String!
+  ): Boolean!
+}
+
 type Mutation {
   """
   Add a new key/value to the cache (overwrites value, if key already exists in the cache).
@@ -60,22 +76,6 @@ type Mutation {
   Clears the whole cache. 
   """
   clear: Boolean!
-}
-
-type Query {
-  """
-  Look up key in the cache and return the value for it if exists otherwise returns null
-  """
-  get(
-    key: String!
-  ): String
-
-  """
-  Checks if a key exists in the cache without returning it.
-  """
-  has(
-    key: String!
-  ): Boolean!
 }
 
 ### Imported Queries START ###

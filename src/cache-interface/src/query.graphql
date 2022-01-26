@@ -9,4 +9,7 @@ type Query {
   Checks if a key exists in the cache without returning it.
   """
   has(key: String!): Boolean!
+
+  # retrieve all the keys in the cache
+  # different extensions for the different cache implementations
 }
